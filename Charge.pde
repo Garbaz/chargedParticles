@@ -40,7 +40,7 @@ class Charge extends PVector {
     this.add(PVector.mult(velocity, dt));
 
     final int BORDER_WIDTH = 5;
-    final float BORDER_COLLISION_DAMPENING_FACTOR = 0.5;
+    final float BORDER_COLLISION_DAMPENING_FACTOR = 0.25;
 
     if (x < BORDER_WIDTH) {
       x = BORDER_WIDTH;
