@@ -4,7 +4,7 @@ IDEAS:
  - Positionally fixed charges
  - Charge emitter
  - 
- */
+*/
 
 //Constants
 final int BACKGROUND_SHADE = 0xCC;
@@ -86,7 +86,7 @@ void draw() {
             PVector cf = new PVector(float(FIELD_DRAW_RASTER)/2 + i*FIELD_DRAW_RASTER, float(FIELD_DRAW_RASTER)/2 + j*FIELD_DRAW_RASTER);
             cf.sub(c);
             float mag = cf.mag();
-            cf.mult(-c.charge/(mag*mag));
+            cf.mult(c.charge/(mag*mag));
             fieldVectors[i][j].add(cf);
           }
           if (strongestLocalField < fieldVectors[i][j].mag()) strongestLocalField = fieldVectors[i][j].mag();
